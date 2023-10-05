@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "href2img",
+  "version": "1.0",
+  "description": "Replaces a link by an image.",
+  "permissions": ["contextMenus"],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
