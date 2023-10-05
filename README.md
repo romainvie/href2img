@@ -3,7 +3,9 @@ A google chrome extension to replace a link to an image by an actual image eleme
 
 ## Usage
 Right-click on any link element on a webpage.
-Click on href2img
+
+Click on href2img.
+
 The html <a> element is replaced by a <img> element where the src attribute is the href attribut of the link.
 
 ## Use case
