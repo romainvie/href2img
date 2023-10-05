@@ -6,7 +6,7 @@ Right-click on any link element on a webpage.
 
 Click on href2img.
 
-The html <a> element is replaced by a <img> element where the src attribute is the href attribut of the link.
+The html &lt;a> element is replaced by a &lt;img> element where the src attribute is the href attribut of the link.
 
 ## Use case
 Used to replace mermaid png links, with markdown, with the actual image.
