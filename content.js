@@ -9,11 +9,12 @@ document.addEventListener("contextmenu", function(event){
 // When the menu item is clicked, replace clicked link by an image
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if(request == "getClickedElt") {		
-		newImg = document.createElement('img');
+		newImg = document.createElement('img');	
 		// Image src attribut is the link's url
 		newImg.src = clickedElt.href;
-		clickedElt.parentNode.insertBefore(newImg, clickedElt);
-		clickedElt.remove();		
+		clickedElt.href = clickedElt.href.replace('https://mermaid.ink/img/pako', 'https://mermaid.live/edit#pako');
+		clickedElt.innerHTML = "";
+		clickedElt.appendChild(newImg);
         sendResponse(null);
     }
 });
