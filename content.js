@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		newImg = document.createElement('img');	
 		// Image src attribut is the link's url
 		newImg.src = clickedElt.href;
-		clickedElt.href = clickedElt.href.replace('https://mermaid.ink/img/pako', 'https://mermaid.live/edit#pako');
+		clickedElt.href = clickedElt.href.replace('https://mermaid.ink/img/pako', 'https://mermaid.live/edit#pako').replace("?type=png","");		
 		clickedElt.innerHTML = "";
 		clickedElt.appendChild(newImg);
         sendResponse(null);
