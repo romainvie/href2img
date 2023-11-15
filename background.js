@@ -11,7 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Send message to content.js when the new element is clicked
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-	if (info.menuItemId = menuItemLabel) {
+	if (info.menuItemId === menuItemLabel) {
 		chrome.tabs.sendMessage(tab.id, "getClickedElt", {frameId: info.frameId}, data => {});
 	}
 });
